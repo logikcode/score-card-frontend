@@ -1,9 +1,9 @@
 import React from 'react'
 
-function SuperAdminDashboard() {
+function SuperAdminDashboardPage() {
   return (
     <div>SuperAdminDashboard</div>
   )
 }
 
-export default SuperAdminDashboard
+export default SuperAdminDashboardPage;

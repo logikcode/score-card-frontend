@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import Login from './components/Login/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
+import SuperAdminDashboardPage from './pages/SuperAdminDashBoardPage/SuperAdminDashboard';
+import DecadevDashboardPage from './pages/DecadevDashboardPage/DecadevDashboardPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +17,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login />} />
-        <Route path='/admin/dashboard' element={<AdminDashboardPage/>}></Route>
+        <Route path='/super-admin/dashboard' element={<SuperAdminDashboardPage />} />
+        <Route path='/admin/dashboard' element={<AdminDashboardPage/>} />
+        <Route path='/decadev/dashboard' element={<DecadevDashboardPage />} />
       </Routes>
     </BrowserRouter>
   </>

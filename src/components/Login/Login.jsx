@@ -3,9 +3,9 @@ import { MainPage, LoginLeftSide, LoginRightSide } from './LoginStyled'
 import logo from "../../Assets/Images/logo.svg";
 import image from "../../Assets/Images/loginImage.png"
 import { useNavigate } from 'react-router-dom';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ApiBaseUrl from '../../common/ApiBaseUrl';
-import axios from 'axios';
+
 import { useState } from 'react';
 
 
@@ -13,11 +13,7 @@ import { useState } from 'react';
 
 function Login() {
   const navigate = useNavigate()
-   const badCredential  = React.createRef();
-    const showPassword = () => {
-        setVisibilty({visibilty: "show"})
-    }
-
+   
     const [email, setEmail] =  useState("");
     const [password, setPassword] = useState("");
     const [visibility, setVisibilty] = useState({visibility: "hide"})
@@ -29,13 +25,32 @@ function Login() {
            
       ).then(resp=>
           {
-            console.log(resp);
-            if(resp.status === 200){
+            //console.log(resp);
+            const {name, email, role} = resp.data.userDto
+            console.log(name, email, role);
+            
+            if(resp.status === 200 && role === "SUPER_ADMIN"){
               const token = resp.data.token.substring(7); 
               localStorage.setItem("token", token)
-              navigate("/admin/dashboard")
+              localStorage.setItem("user_info", JSON.stringify(resp.data.userDto))
+
+              navigate("/super-admin/dashboard")
              
             }
+            else if(resp.status === 200 && role === "ADMIN"){
+              const token = resp.data.token.substring(7); 
+              localStorage.setItem("token", token)
+              localStorage.setItem("user_info", JSON.stringify(resp.data.userDto))
+
+              navigate("/admin/dashboard")
+            } else if(resp.status === 200 && role === "DEV"){
+              const token = resp.data.token.substring(7); 
+              localStorage.setItem("token", token)
+              localStorage.setItem("user_info", JSON.stringify(resp.data.userDto))
+
+              navigate("/decadev/dashboard")
+            }
+           
             
           }
         )
@@ -66,7 +81,7 @@ function Login() {
                         </div>
                         <div className="login-input-wrapper">
                             <label htmlFor="" className='form-label'>Password</label>
-                            <input type="password" className='form-input'value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter password' required/>
+                            <input type="password" className='form-input' onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter password' required/>
                         </div>
                         <div className="forgot-passwd-link-wrapper">
                           <Link className='forgot-password-link'>Forgot password?</Link>
