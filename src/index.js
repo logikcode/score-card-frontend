@@ -2,13 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { IndexPage } from './IndexStyled';
 import reportWebVitals from './reportWebVitals';
+import Login from './components/Login/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <App />
+ 
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/admin/dashboard' element={<AdminDashboardPage/>}></Route>
+      </Routes>
+    </BrowserRouter>
   </>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
