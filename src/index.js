@@ -2,13 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { IndexPage } from './IndexStyled';
 import reportWebVitals from './reportWebVitals';
+import Login from './components/Login/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
+import SuperAdminDashboardPage from './pages/SuperAdminDashBoardPage/SuperAdminDashboard';
+import DecadevDashboardPage from './pages/DecadevDashboardPage/DecadevDashboardPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <App />
+ 
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/super-admin/dashboard' element={<SuperAdminDashboardPage />} />
+        <Route path='/admin/dashboard' element={<AdminDashboardPage/>} />
+        <Route path='/decadev/dashboard' element={<DecadevDashboardPage />} />
+      </Routes>
+    </BrowserRouter>
   </>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
