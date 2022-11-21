@@ -41,12 +41,6 @@ const handleClick = () => {
                 </WrapperForAdminManagement>
                 
             </Container>
-            
-
-           
-
-            
-
             <WrapperForLogout>
                 <img src={iconLogout} alt="" className="logout-icon" />
                 <NavigationLink>Logout</NavigationLink>

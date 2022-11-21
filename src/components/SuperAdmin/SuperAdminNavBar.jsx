@@ -38,21 +38,7 @@ function SuperAdminNavBar() {
             <HarmBurger>&#8801;</HarmBurger>
         </NavbarContainer>
 
-        
         <Outlet />
-        
-            {
-            // <main style={{padding: "0rem 0", background: "gray"}}>
-            
-            // </main>
-
-            //     <Routes>
-            //     <Route path='/Squad' element={<SquadPage/>}></Route>
-            // </Routes>
-        }
-       
-
-    
     </>
   )
 }
