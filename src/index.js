@@ -9,15 +9,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 import SuperAdminDashboardPage from './pages/SuperAdminDashBoardPage/SuperAdminDashboard';
 import DecadevDashboardPage from './pages/DecadevDashboardPage/DecadevDashboardPage';
+import SuperAdminNavBar from './components/SuperAdmin/SuperAdminNavBar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
  
     <BrowserRouter>
+      
       <Routes>
         <Route path='/' element={<Login />} />
-        <Route path='/super-admin/dashboard' element={<SuperAdminDashboardPage />} />
+        <Route element ={<SuperAdminNavBar />}> 
+          
+          <Route path='/super-admin/dashboard' element={<SuperAdminDashboardPage />}> 
+           
+          </Route>
+          
+        </Route>
+       
         <Route path='/admin/dashboard' element={<AdminDashboardPage/>} />
         <Route path='/decadev/dashboard' element={<DecadevDashboardPage />} />
       </Routes>
