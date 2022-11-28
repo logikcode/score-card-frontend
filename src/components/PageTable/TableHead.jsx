@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableHead, TableRow, TableHeader } from '../Modal/TableHeadStyled';
+import { TableHead, TableRow, TableHeader } from './TableHeadStyled';
 
 function PageTableHead() {
   return (
