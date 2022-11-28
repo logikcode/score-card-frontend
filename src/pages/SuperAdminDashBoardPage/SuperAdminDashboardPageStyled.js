@@ -8,12 +8,17 @@ height: 90vh;
 
 .main-section{
     /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); */
-    width: calc(80%);
+   
+   
+    
+}
+
+`
+export const DashboardBody = styled.div`
+ width: calc(80%);
     height: 100%;
     margin-left: 0px;
     text-align: center;
     color: white;
-   
-    
-}
+
 `
