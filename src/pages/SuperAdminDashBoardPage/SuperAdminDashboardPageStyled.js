@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BodySection = styled.div`
+export const DashboardBodySection = styled.div`
 /* border: 1px solid blue; */
 display: flex;
 flex-direction: row;
