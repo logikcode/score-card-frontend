@@ -1,10 +1,10 @@
 import React from 'react';
-import { TableHead, TableRow, TableHeader } from './TableHeadStyled';
+import { TableHead, RowTableHead, TableHeader } from './TableHeadStyled';
 
 function PageTableHead() {
   return (
     <TableHead>
-        <TableRow>
+        <RowTableHead>
             <TableHeader>Full Name</TableHeader>
             <TableHeader>Algorithms</TableHeader>
             <TableHeader>Weekly Task</TableHeader>
@@ -14,7 +14,7 @@ function PageTableHead() {
             <TableHeader>Overall rating</TableHeader>
             <TableHeader>Action</TableHeader>
            
-        </TableRow>
+        </RowTableHead>
     </TableHead>
   )
 }
