@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const TableRow = styled.tr`
 
-
+//border: 1px solid black;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin: 10px 0;
 margin-left: -20px;
+position: relative;
 //box-shadow: 0px 1px gray;
 
 .data{
@@ -46,6 +47,8 @@ color: #14A800;
     /* border: 1px solid blue; */
     padding-right: 20px;
     justify-content: center;
+    position: relative;
+    cursor: pointer;
     /* align-items: center; */
 }
 
@@ -54,19 +57,19 @@ color: #14A800;
 
 
 export const TableData = styled.td`
-/* border: 1px solid blue; */
+ /* border: 2px solid red;  */
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 20px;
-//width: 60px;
+width: 60px;
 color: #000000;
 align-items: center;
 justify-content: center;
 margin-left: -25px;
 padding-top: 10px;
-
+text-align: center;
 padding-left: 25px;
 
 

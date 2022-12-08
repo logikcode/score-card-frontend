@@ -19,13 +19,14 @@ root.render(
       
       <Routes>
         <Route path='/' element={<Login />} />
+
         <Route element ={<SuperAdminNavBar />}> 
           
           <Route path='/super-admin/dashboard' element={<SuperAdminDashboardPage />}> 
           
           </Route>
-           <Route path="/super-admin/weekly-performance" element={<ViewWeeklyPerformancePage/>} />
-        </Route>
+            <Route path="/super-admin/weekly-performance" element={<ViewWeeklyPerformancePage/>} />
+          </Route>
        
         <Route path='/admin/dashboard' element={<AdminDashboardPage/>} />
         <Route path='/decadev/dashboard' element={<DecadevDashboardPage />} />

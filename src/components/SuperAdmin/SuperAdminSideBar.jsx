@@ -25,17 +25,17 @@ const handleClick = () => {
     <>
         < SideBarContainer>
             <Container>
-                <WrapperForPerformanceReport  className={`${ isActive ? 'active-link':""}`} onClick={handleClick}>
+                <WrapperForPerformanceReport  className={`${ isActive ? 'active-link':"active"}`} onClick={handleClick}>
                     <img src={iconHome} alt="" className="icon-home" />
-                    <NavigationLink>Perfomance Report</NavigationLink>
+                    <NavigationLink to={""}>Perfomance Report</NavigationLink>
                 </WrapperForPerformanceReport>
 
-                 <WrapperForDecadevManagement  className={`${isActive ? 'active-link':""}`} onClick={(e)=> {handleClick()}}>
+                 <WrapperForDecadevManagement  className={`${isActive ? 'active-link':"active"}`} onClick={(e)=> {handleClick()}}>
                     <img src={iconUser} alt="" className="img-user" />
                     <NavigationLink>Decadev Management</NavigationLink>
                 </WrapperForDecadevManagement>
 
-                <WrapperForAdminManagement className={`${isActive ? 'active-link':""}`} onClick={(e)=> {handleClick()}}>
+                <WrapperForAdminManagement className={`${isActive ? 'active-link':"active"}`} onClick={(e)=> {handleClick()}}>
                     <img src={iconAdmin} alt="" className="admin" />
                     <NavigationLink>Admin Management</NavigationLink>
                 </WrapperForAdminManagement>

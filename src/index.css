@@ -17,3 +17,55 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Previous{
+
+}
+.Next{
+
+}
+
+.paginationBttns{
+width: fit-content;
+height: 40px;
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+color: black;
+margin: 10px auto;
+border: 1px solid gray;
+border-radius: 5px;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  border: 0.5px solid gray;
+  /* color: #2b2eff; */
+  cursor: pointer;
+  font-weight: 500;
+  width: 20px;
+
+}
+.paginationBttns a:hover{
+  color: black;
+  background-color: #14A800;
+  /* color: #14A800; */
+}
+
+.prevBtn{
+
+}
+
+.nextBtn{
+
+}
+
+.paginatedDisabled{
+
+}
+
+.paginatedActive a {
+  color: white;
+  background-color: #14A800;
+}

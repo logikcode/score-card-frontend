@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Table = styled.table`
     /* border: 1px solid red; */
-    margin: 40px 40px 0 40px;
+    margin: 10px 40px 0 40px;
     display: flex;
     flex-direction: column;
     background: rgba(33, 51, 79, 0.1);

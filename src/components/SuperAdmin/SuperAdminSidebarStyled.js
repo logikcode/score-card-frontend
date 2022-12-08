@@ -4,12 +4,15 @@ import { NavLink } from "react-router-dom";
 
 export const SideBarContainer = styled.div`
 width: calc(20%);
-height: 100%;
+height: 90%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
 filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.04));
+position: fixed;
+top: 10%;
+left: 0;
 
 
 `
@@ -18,28 +21,31 @@ export const Container = styled.div`
 margin-top: 20px;
 
 `
-export const WrapperForPerformanceReport = styled.div`
+export const WrapperForPerformanceReport = styled.a`
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 8px 16px;
 gap: 16px;
-background: #14A800;
+/* background: #14A800; */
 border-radius: 4px;
 width: 80%;
 height: 48px;
 margin: 0 auto;
 cursor: pointer;
+
 .icon-home{
     color: gray;
     background: #14A800;
 }
-.active-link{
+/* .active-link{
+    background: #14A800;
+} */
+&:active{
     background: #14A800;
 }
-
 `
-export const WrapperForDecadevManagement = styled.div`
+export const WrapperForDecadevManagement = styled.a`
 
 display: flex;
 flex-direction: row;
@@ -52,7 +58,7 @@ margin: 0 auto;
 border-radius: 4px;
 cursor: pointer;
 
-.activeh{
+&:active{
     background: #14A800;
     /* display: none; */
 }
@@ -60,7 +66,7 @@ cursor: pointer;
 
 `
 
-export const WrapperForAdminManagement = styled.div`
+export const WrapperForAdminManagement = styled.a`
 
 display: flex;
 flex-direction: row;
@@ -74,7 +80,7 @@ margin: 0 auto;
 border-radius: 4px;
 cursor: pointer;
 
-.activeh{
+&:active{
     background: #14A800;
 }
 
