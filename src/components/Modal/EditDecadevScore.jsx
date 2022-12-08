@@ -6,7 +6,7 @@ import ApiBaseUrl from '../../common/ApiBaseUrl';
 function EditDecadevScore(props) {
 
 const {showForm, toggleFormDisplay} = props;
-const {algorithmScore, weeklyAssessment, qaTest, agileTest} = props.devData
+const {algorithmScore, weeklyAssessment, qaTest, agileTest, week} = props.devData
 const [algorithm, setAlgorithm] = useState(algorithmScore)
 const [weeklyTask, setWeeklyTask] = useState(props.devData.weeklyTask)
 const [agile, setAgile] = useState(agileTest);
@@ -18,7 +18,7 @@ const scores = {
     "qaTest": "", 
     "agileTest":agile,
     "weeklyTask": weeklyTask, 
-    "week":1
+    "week":week
 }
 console.log(algorithm, weeklyTask, agile, assessment);
 

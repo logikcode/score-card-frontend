@@ -19,18 +19,15 @@ function EditDecadevDetails(props) {
   const handleScoreEdit = async (event, data) =>{
 
     console.log(data)
-    
-    //console.log(id);
+   
     const response = await ApiBaseUrl.put(`/admin/update-score/${id}/weekly-score/${week}`, data, config)
  
     .then((response)=>{
       
-      //fetchDevScore(1,5);
       
-      //setScoreData(response.data.data);
     } )
     
-    console.log("Edit handler called")
+    
   }
   const handleDelete = ()=>{
    
@@ -49,7 +46,7 @@ function EditDecadevDetails(props) {
         <div className="delete-dev" onClick={(e)=>{handleDelete(e)}}>Delete</div>
     </EditDetailDiv>
 
-    <EditDecadevScore showForm={showForm} toggleFormDisplay={toggleFormDisplay} handleScoreEdit={handleScoreEdit} devData={props.devData}/>
+    <EditDecadevScore showForm={showForm} toggleFormDisplay={toggleFormDisplay} handleScoreEdit={handleScoreEdit} week={week} devData={props.devData}/>
 
     </>
   )
