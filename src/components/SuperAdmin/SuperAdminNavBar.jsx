@@ -20,7 +20,7 @@ function SuperAdminNavBar() {
                     <NavigationLink to = "/super-admin/squad"> Dashboard</NavigationLink>
                     <NavigationLink to ="">Stacks</NavigationLink>
                     <NavigationLink to = "">Pods</NavigationLink>
-                    <NavigationLink to ="">Pod List</NavigationLink>
+                    <NavigationLink to ="/super-admin/weekly-performance">Pod List</NavigationLink>
 
                 </LinkWrapper>
             </LinksContainer>

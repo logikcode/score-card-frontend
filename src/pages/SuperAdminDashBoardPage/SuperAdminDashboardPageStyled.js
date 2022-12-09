@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
-export const BodySection = styled.div`
-/* border: 1px solid blue; */
+export const DashboardBodySection = styled.div`
+
 display: flex;
 flex-direction: row;
-height: 90vh;
+position: absolute;
+left: 20%;
+top: 11%;
+width: 79%;
 
-.main-section{
-    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); */
-    width: calc(80%);
-    height: 100%;
+`
+export const DashboardBody = styled.div`
+
+    width: 100%;
     margin-left: 0px;
     text-align: center;
     color: white;
    
-    
-}
+
 `

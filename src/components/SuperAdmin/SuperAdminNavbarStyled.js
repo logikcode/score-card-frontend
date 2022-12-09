@@ -11,6 +11,10 @@ height: 75px;
 background: #FFFFFF;
 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
 
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2;
 `
 export const Logo = styled.div`
 

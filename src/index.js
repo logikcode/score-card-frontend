@@ -10,7 +10,7 @@ import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 import SuperAdminDashboardPage from './pages/SuperAdminDashBoardPage/SuperAdminDashboard';
 import DecadevDashboardPage from './pages/DecadevDashboardPage/DecadevDashboardPage';
 import SuperAdminNavBar from './components/SuperAdmin/SuperAdminNavBar';
-
+import ViewWeeklyPerformancePage from './pages/SuperAdminDashBoardPage/ViewWeeklyPerformancePage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -19,13 +19,14 @@ root.render(
       
       <Routes>
         <Route path='/' element={<Login />} />
+
         <Route element ={<SuperAdminNavBar />}> 
           
           <Route path='/super-admin/dashboard' element={<SuperAdminDashboardPage />}> 
-           
-          </Route>
           
-        </Route>
+          </Route>
+            <Route path="/super-admin/weekly-performance" element={<ViewWeeklyPerformancePage/>} />
+          </Route>
        
         <Route path='/admin/dashboard' element={<AdminDashboardPage/>} />
         <Route path='/decadev/dashboard' element={<DecadevDashboardPage />} />
